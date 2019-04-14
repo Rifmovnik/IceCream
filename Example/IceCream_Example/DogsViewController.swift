@@ -54,7 +54,16 @@ class DogsViewController: UIViewController {
         /// Results instances are live, auto-updating views into the underlying data, which means results never have to be re-fetched.
         /// https://realm.io/docs/swift/latest/#objects-with-primary-keys
         let dogs = realm.objects(Dog.self)
-        
+		
+//		for index in 0...1000 {
+//			if(index % 500 == 0) {
+//				print(index)
+//			}
+//			add();
+//		}
+//		let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//		appDelegate.syncEngine?.pushAll()
+
         Observable.array(from: dogs).subscribe(onNext: { (dogs) in
             /// When dogs data changes in Realm, the following code will be executed
             /// It works like magic.
