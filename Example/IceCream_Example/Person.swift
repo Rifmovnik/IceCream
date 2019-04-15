@@ -13,7 +13,8 @@ class Person: Object {
     @objc dynamic var id = NSUUID().uuidString
     @objc dynamic var name = "Jim"
     @objc dynamic var isDeleted = false
-    
+	@objc dynamic var updatedAt = Date()
+
     let dogs = LinkingObjects(fromType: Dog.self, property: "owner")
     
     override class func primaryKey() -> String? {
